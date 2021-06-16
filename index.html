@@ -31,7 +31,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Alvin</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,9 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">About</a>
-            <a class="nav-link" href="#">Projects</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#project">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </div>
         </div>
       </div>
@@ -54,9 +54,9 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-4 text-white">
-            <img src="img/hero.jpg" alt="Alvin" class="img-thumbnail p-4" />
+            <img src="img/hero.jpg" alt="Alvin" class="img-thumbnail p-4" data-aos="fade-right" data-aos-duration="700" />
           </div>
-          <div class="col-md-5 text-white pt-5 jumbotron-me">
+          <div class="col-md-5 text-white pt-5 jumbotron-me" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
             <h2 class="">Welcome To My Portfolio Website</h2>
             <hr />
             <p>
@@ -77,13 +77,13 @@
     <!-- akhir jumbotron -->
 
     <!-- about -->
-    <section id="about" class="about">
+    <section id="about" class="about pt-5">
       <div class="container">
         <div class="row justify-content-around">
           <div class="col-md-5">
-            <img src="img/smkn26.jpg" alt="" class="img-fluid" />
+            <img src="img/smkn26.jpg" alt="" class="img-fluid" data-aos="fade-down-right" data-aos-offset="400" data-aos-duration="1000" />
           </div>
-          <div class="col-md-5 about-me p-5">
+          <div class="col-md-5 about-me p-5" data-aos="fade-down-left" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="300">
             <h2 class="text-center">About me</h2>
             <hr />
             <p>
@@ -107,11 +107,11 @@
     <!-- akhir about -->
 
     <!-- project -->
-    <section id="project" class="project">
+    <section id="project" class="project pt-5">
       <div class="container">
         <div class="row text-center pb-5">
           <div class="col-md text-white">
-            <h2>My Projects</h2>
+            <h2 data-aos="fade-in" data-aos-offset="300" data-aos-duration="300">My Projects</h2>
           </div>
         </div>
         <div class="row text-white text-center">
@@ -159,7 +159,7 @@
       <div class="container pt-5">
         <div class="row text-center mb-4">
           <div class="col">
-            <h2>Contact Me</h2>
+            <h2 data-aos="fade-right" data-aos-offset="300" data-aos-duration="300">Contact Me</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -169,15 +169,15 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="portfolio-contact-form">
-              <div class="mb-3">
+              <div class="mb-3 contact-form">
                 <label for="name" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 contact-form">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 contact-form">
                 <label for="pesan" class="form-label">Pesan</label>
                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
@@ -202,11 +202,30 @@
 
     <!-- footer -->
     <footer>
-      <div class="container text-white text-center p-5">
-        <i class="fab fa-facebook-f"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-google"></i>
-        <i class="fab fa-instagram"></i>
+      <div class="container text-white text-center">
+        <div class="row justify-content-center pb-3">
+          <div class="col-2">
+            <!-- Facebook -->
+            <a class="text-white" href="https://www.facebook.com/alvin.adrianto.3" role="button"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="col-2">
+            <!-- Twitter -->
+            <a class="text-white" href="https://twitter.com/Alvin39378829" role="button"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div class="col-2">
+            <!-- Google -->
+            <a class="text-white" href="https://www.google.com/" role="button"><i class="fab fa-google"></i></a>
+          </div>
+          <div class="col-2">
+            <!-- Instagram -->
+            <a class="text-white" href="https://www.instagram.com/_alvin.a.a/" role="button"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="row pt-5">
+          <div class="col-md-11">
+            <p>&copy; Copyright 2021 | built by Alvin Adrianto</p>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- akhir footer -->
@@ -224,7 +243,54 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init();
+      const myProjects = document.querySelectorAll('.card');
+      const contact = document.querySelectorAll('.contact-form');
+
+      contact.forEach((img, i) => {
+        img.dataset.aos = 'fade-right';
+        img.dataset.aosDuration = 1200;
+        img.dataset.aosDelay = i * 10;
+        img.dataset.aosOffset = 400;
+      });
+
+      myProjects.forEach((img, i) => {
+        img.dataset.aos = 'flip-left';
+        img.dataset.aosDuration = 1200;
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosOffset = 400;
+      });
+
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwr3qqYwzDw18HEcsmmdBLzHyq3l1LI00R99gPM5KJ7OlT3hp-cxZcRhsBKwKmrQbuv3Q/exec';
+      const form = document.forms['portfolio-contact-form'];
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.my-alert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // ketika tombol submit diklik
+        // tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+            // tampilkan alert
+            myAlert.classList.toggle('d-none');
+            // reset form
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
     </script>
   </body>
 </html>
