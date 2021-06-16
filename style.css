@@ -1,3 +1,7 @@
+body {
+  height: 2000px;
+}
+
 h2 {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -29,14 +33,14 @@ p {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-.about-me {
+.jumbotron-me {
   padding: 30px 30px 20px;
   background-color: #2c2d30;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
   border-radius: 5%;
 }
 
-.about-me p {
+.jumbotron-me p {
   text-align: justify;
   padding-top: 1.2rem;
   line-height: 30px;
@@ -45,4 +49,28 @@ p {
 /* about */
 .about {
   background-color: lightgray;
+}
+
+.about img {
+  box-shadow: 30px 30px 0px #2c2d30;
+}
+
+.about-me {
+  background-color: lightgray;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 5%;
+}
+
+.about p {
+  text-align: justify;
+}
+
+/* projects */
+.project {
+  background-color: #2c2d30;
+}
+
+.card {
+  background-color: #2c2d30;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
