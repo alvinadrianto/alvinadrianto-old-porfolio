@@ -1,0 +1,48 @@
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* navbar */
+.navbar-brand {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar-link {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* jumbotron */
+.jumbotron {
+  margin-top: -70px;
+  padding-top: 200px;
+  background-color: #2c2d30;
+}
+
+.jumbotron img {
+  border-radius: 20%;
+  background-color: #2c2d30;
+  border-color: #2c2d30;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.about-me {
+  padding: 30px 30px 20px;
+  background-color: #2c2d30;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  border-radius: 5%;
+}
+
+.about-me p {
+  text-align: justify;
+  padding-top: 1.2rem;
+  line-height: 30px;
+}
+
+/* about */
+.about {
+  background-color: lightgray;
+}
