@@ -74,3 +74,13 @@ p {
   background-color: #2c2d30;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
+
+/* footer */
+footer {
+  background-color: #2c2d30;
+}
+
+footer i {
+  font-size: 3rem;
+  padding-right: 5rem;
+}
