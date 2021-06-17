@@ -1,5 +1,5 @@
 body {
-  height: 2000px;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -11,6 +11,14 @@ p {
 }
 
 /* navbar */
+.navbar {
+  background-color: #2c2d30;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(253, 253, 253, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
 .navbar-brand {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -21,8 +29,7 @@ p {
 
 /* jumbotron */
 .jumbotron {
-  margin-top: -70px;
-  padding-top: 200px;
+  padding-top: 6rem;
   background-color: #2c2d30;
 }
 
@@ -36,7 +43,7 @@ p {
 .jumbotron-me {
   padding: 30px 30px 20px;
   background-color: #2c2d30;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
   border-radius: 5%;
 }
 
@@ -46,13 +53,22 @@ p {
   line-height: 30px;
 }
 
+.alvin {
+  background: url(img/guest.png);
+}
+
+.alvin:hover {
+  background: url(img/hero.png);
+}
+
 /* about */
 .about {
+  padding-top: 5rem;
   background-color: lightgray;
 }
 
 .about img {
-  box-shadow: 30px 30px 0px #2c2d30;
+  box-shadow: 1px 1px 3px #2c2d30;
 }
 
 .about-me {
@@ -67,12 +83,31 @@ p {
 
 /* projects */
 .project {
+  padding-top: 6rem;
   background-color: #2c2d30;
 }
 
-.card {
+.my-project {
+  transition: 1s;
+}
+
+.my-project .card {
   background-color: #2c2d30;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card a {
+  transition: 0.8s;
+}
+
+.card a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* contact */
+.contact {
+  padding-top: 4rem;
 }
 
 /* footer */
@@ -83,4 +118,41 @@ footer {
 footer i {
   font-size: 3rem;
   padding-right: 5rem;
+}
+
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #2c2d30; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid white; /* creates padding around scroll thumb */
+}
+
+/* Mobile version */
+@media (min-width: 992px) {
+  .navbar {
+    background-color: #2c2d30;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+
+  .jumbotron {
+    padding-top: 230px;
+    margin-top: -70px;
+  }
+
+  .about img {
+    box-shadow: 30px 30px 0px #2c2d30;
+  }
+
+  .my-project:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
 }
