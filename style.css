@@ -59,7 +59,7 @@ nav {
   line-height: 30px;
 }
 
-.img-thumbnail {
+/* .img-thumbnail {
   padding: 2rem;
   border-radius: 20%;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
@@ -70,7 +70,7 @@ nav {
 
 .img-thumbnail:hover {
   content: url(img/hero.png);
-}
+} */
 
 /* about */
 .about {
@@ -161,12 +161,48 @@ body::-webkit-scrollbar-thumb {
     padding-top: 70px;
   }
 
-  .about img {
-    box-shadow: 30px 30px 0px #2c2d30;
+  .about .about-img {
+    transform: translateY(50px);
+    box-shadow: 0 0 0px #2c2d30;
+    transition: 1s;
+  }
+
+  .about .about-img:hover {
+    transform: scale(1.1) translateY(20px);
+    box-shadow: 20px 20px 0px #2c2d30;
   }
 
   .my-project:hover {
     transform: scale(1.1);
     z-index: 1;
   }
+}
+
+/* animation */
+@keyframes changeContent {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    content: url(img/hero.png);
+  }
+}
+.img-thumbnail {
+  content: url(img/guest.png);
+  padding: 2rem;
+  border-radius: 20%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  background-color: #2c2d30;
+  border-color: #2c2d30;
+  transition: all 1s linear;
+  animation-direction: reverse;
+}
+
+.img-thumbnail:hover {
+  animation-fill-mode: forwards;
+  animation: changeContent 0.3s linear forwards;
 }
