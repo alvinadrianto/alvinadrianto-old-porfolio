@@ -123,6 +123,11 @@ nav {
   color: black;
 }
 
+.my-project:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
 /* contact */
 .contact {
   padding-top: 4rem;
@@ -182,11 +187,6 @@ body::-webkit-scrollbar-thumb {
   /* .about .about-img:hover {
     transform: scale(1.1);
   } */
-
-  .my-project:hover {
-    transform: scale(1.1);
-    z-index: 1;
-  }
 }
 
 /* animation */
